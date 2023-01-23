@@ -1,4 +1,4 @@
-FROM uffizzi/ttyd:golang1.18-alpine as build
+FROM uffizzi/ttyd:latest
 
 RUN apk --no-cache add -f \
   openssl \
@@ -77,5 +77,5 @@ RUN     apk update --quiet && \
 
 EXPOSE  7700/tcp
 
-ENTRYPOINT ["tini", "--"]
-CMD     ["ttyd", "/bin/zsh"]
+# ENTRYPOINT ["tini", "--"]
+# CMD     ["ttyd", "/bin/zsh"]
