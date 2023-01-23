@@ -78,4 +78,4 @@ RUN     apk update --quiet && \
 EXPOSE  7700/tcp
 
 ENTRYPOINT ["tini", "--"]
-CMD  ["ttyd", "/entry.sh --install"]
+CMD  ["ttyd", "/bin/zsh"]
