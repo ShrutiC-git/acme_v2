@@ -15,8 +15,8 @@ services:
     ports:
     - "7700:7700"
     - "7681:7681"
-    entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd acme.sh"]
+    entrypoint: ["tini", "--"]
+    command: ["/bin/sh ttyd acme.sh"]
     deploy:
       resources:
         limits:
