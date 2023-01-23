@@ -1,0 +1,23 @@
+version: "3"
+
+x-uffizzi:
+  ingress:
+    service: acmesh
+    port: 7681
+
+services:
+
+  acmesh:
+    image: "${ACME_IMAGE}"
+    # volumes: 
+    #  - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
+    #  - ./acme.sh:/acme.sh
+    ports:
+    - "7700:7700"
+    - "7681:7681"
+    entrypoint: ["/bin/bash", "-c"]
+    command: ["ttyd /entry.sh --install tui"]
+    deploy:
+      resources:
+        limits:
+          memory: 2000M
