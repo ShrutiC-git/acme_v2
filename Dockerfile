@@ -14,7 +14,7 @@ RUN apk --no-cache add -f \
   libidn \
   jq
 
-ENV LE_CONFIG_HOME ./acme.sh
+ENV LE_CONFIG_HOME /acme.sh
 
 ARG AUTO_UPGRADE=1
 
