@@ -16,7 +16,7 @@ services:
     - "7700:7700"
     - "7681:7681"
     entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd /entry.sh --help;"]
+    command: ["ttyd /entry.sh acme.sh --install"]
     deploy:
       resources:
         limits:
