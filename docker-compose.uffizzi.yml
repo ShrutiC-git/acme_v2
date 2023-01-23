@@ -10,13 +10,13 @@ services:
   acmesh:
     image: "${ACME_IMAGE}"
     volumes: 
-      - ./entrypoint.sh:/entrypoint.sh:ro
+      # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
     ports:
     - "7700:7700"
     - "7681:7681"
     entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd ./entrypoint.sh"]
+    command: ["ttyd /entry.sh daemon"]
     deploy:
       resources:
         limits:
