@@ -72,9 +72,6 @@ fi" >/entry.sh && chmod +x /entry.sh
 
 VOLUME /acme.sh
 
-# ENTRYPOINT ["/entry.sh"]
-# CMD ["--help"]
-
 RUN     apk update --quiet && \
         apk add -q --no-cache libgcc tini
 
