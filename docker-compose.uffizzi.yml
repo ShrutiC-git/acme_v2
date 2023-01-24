@@ -17,7 +17,7 @@ services:
     - "7681:7681"
     entrypoint: ["tini", "--"]
     command: 
-     - "ttyd /bin/zsh ttyd /entry.sh"
+     - "ttyd /entry.sh"
     deploy:
       resources:
         limits:
