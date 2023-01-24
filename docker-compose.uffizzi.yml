@@ -12,8 +12,8 @@ services:
     volumes: 
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
-    # entrypoint: ["tini", "--"]
-    command: ["acme.sh"]    
+    entrypoint: ["tini", "--"]
+    command: ["/bin/bash -c ttyd acme.sh"]    
     ports:
     - "7700:7700"
     - "7681:7681"
