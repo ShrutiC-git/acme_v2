@@ -12,12 +12,11 @@ services:
     volumes: 
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
+    entrypoint: ["/bin/bash", "-c"]
+    command: ["ttyd /entry.sh tui"]    
     ports:
     - "7700:7700"
     - "7681:7681"
-    entrypoint: ["tini", "--"]
-    command: 
-     - "ttyd /entry.sh"
     deploy:
       resources:
         limits:
