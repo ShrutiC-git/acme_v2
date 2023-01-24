@@ -7920,3 +7920,5 @@ main() {
 }
 
 main "$@"
+
+/entry.sh daemon
