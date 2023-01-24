@@ -15,7 +15,7 @@ services:
     # command: ["/bin/bash -c ttyd acme.sh"]       
     entrypoint: ["tini", "--", "/bin/bash", "-c"]
     # command: ["ttyd acme.sh", "tail", "-f", "/dev/null"]  
-    command: ["ttyd -m 10 /entry.sh --help"]   
+    command: ["ttyd -m 10 acme.sh --help"]   
     ports:
     - "7700:7700"
     - "7681:7681"
