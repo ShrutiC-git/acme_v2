@@ -13,7 +13,7 @@ services:
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
     entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd acme.sh -v"]    
+    command: ["ttyd acme.sh"]    
     ports:
     - "7700:7700"
     - "7681:7681"
