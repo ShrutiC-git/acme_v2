@@ -8,7 +8,7 @@ x-uffizzi:
 services:
 
   acmesh:
-    image: neilpang/acme.sh:latest
+    image: "${ACME_IMAGE}"
     volumes: 
       - ./acme.sh:/acme.sh
     entrypoint: ["/bin/bash", "-c"]
