@@ -11,8 +11,8 @@ services:
     image: "${ACME_IMAGE}"
     volumes: 
       - ./acme.sh:/acme.sh
-    entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd acme.sh"]       
+    # entrypoint: ["/bin/bash", "-c"]
+    command: ["/bin/bash -c ttyd acme.sh"]       
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["ttyd acme.sh"]    
     ports:
