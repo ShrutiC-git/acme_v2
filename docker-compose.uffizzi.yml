@@ -12,7 +12,7 @@ services:
     volumes: 
       - ./acme.sh:/acme.sh
     entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd acme.sh --update-account --accountemail test@test.com && tail -f /dev/null"]       
+    command: ["ttyd acme.sh --update-account --accountemail test@test.com"]       
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["ttyd acme.sh"]    
     ports:
