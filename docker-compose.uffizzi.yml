@@ -10,9 +10,10 @@ services:
   acmesh:
     image: "${ACME_IMAGE}"
     volumes: 
+      - ./entrypoint-uffizzi.sh:/entrypoint-uffizzi.sh:ro
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
-      - ./entrypoint-uffizzi.sh:/entrypoint-uffizzi.sh:ro
+
     entrypoint: ["/bin/sh", "-c"]
     command: ["ttyd ./entrypoint-uffizzi.sh"]       
     # entrypoint: ["/bin/bash", "-c"]
