@@ -15,11 +15,11 @@ services:
     ports:
     - "7700:7700"
     - "7681:7681"
-    # entrypoint: ["tini", "--"]
+    entrypoint: ["tini", "--"]
     command: 
      - "-c"
-     - "ls \
-        && entry.sh
+     - "ttyd \
+        && ls && entry.sh
         "
     deploy:
       resources:
