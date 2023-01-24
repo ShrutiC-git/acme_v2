@@ -12,7 +12,7 @@ services:
     volumes: 
       - ./acme.sh:/acme.sh
     # entrypoint: ["/bin/bash", "-c"]
-    command: ["/bin/bash -c ttyd acme.sh"]       
+    # command: ["/bin/bash -c ttyd acme.sh"]       
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["ttyd acme.sh"]    
     ports:
