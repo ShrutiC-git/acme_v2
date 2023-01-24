@@ -8,7 +8,7 @@ x-uffizzi:
 services:
 
   acmesh:
-    image: "${ACME_IMAGE}"
+    image: neilpang/acme.sh:latest
     volumes: 
       - ./entrypoint-uffizzi.sh:/entrypoint-uffizzi.sh:ro
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
