@@ -1,4 +1,4 @@
-FROM uffizzi/ttyd:golang1.18-alpine as build
+FROM uffizzi/ttyd:golang1.18-alpine
 
 RUN apk --no-cache add -f \
   openssl \
@@ -72,13 +72,10 @@ fi" >/entry.sh && chmod +x /entry.sh
 
 VOLUME /acme.sh
 
-# ENTRYPOINT ["/entry.sh"]
-# CMD ["--help"]
-
 RUN     apk update --quiet && \
         apk add -q --no-cache libgcc tini
 
 EXPOSE  7700/tcp
 
-ENTRYPOINT ["tini", "--"]
-CMD  ["ttyd", "/bin/zsh"]
+ENTRYPOINT ["/entry.sh"]
+CMD ["--help"]
