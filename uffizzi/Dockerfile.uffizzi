@@ -81,5 +81,5 @@ EXPOSE  7700/tcp
 # # CMD     ["ttyd", "/bin/zsh", "tail", "/dev/null"]
 # CMD     ["ttyd", "/bin/zsh"]
 
-ENTRYPOINT ["tini", "--"]
-CMD ["ttyd", "/bin/zsh"]
+ENTRYPOINT ["/entry.sh"]
+CMD ["--help"]
