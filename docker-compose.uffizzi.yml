@@ -12,7 +12,7 @@ services:
     volumes: 
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
-    entrypoint: ["tini", "--"]
+    entrypoint: ["/bin/sh", "-c"]
     command: ["ttyd acme.sh"]       
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["ttyd acme.sh"]    
