@@ -15,9 +15,9 @@ services:
     ports:
     - "7700:7700"
     - "7681:7681"
-    # entrypoint: ["/bin/bash", "-c"]
+    entrypoint: ["/bin/bash", "-c"]
     command: 
-     - "ttyd /entry.sh"
+     - "ls && ttyd /entry.sh"
     deploy:
       resources:
         limits:
