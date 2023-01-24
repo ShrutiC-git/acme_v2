@@ -14,7 +14,7 @@ services:
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["/bin/bash -c ttyd acme.sh"]       
     entrypoint: ["/bin/bash", "-c"]
-    command: ["acme.sh --install", "tail", "-f", "/dev/null"]    
+    command: ["ttyd acme.sh --install", "tail", "-f", "/dev/null"]    
     ports:
     - "7700:7700"
     - "7681:7681"
