@@ -10,12 +10,12 @@ services:
   acmesh:
     image: neilpang/acme.sh:latest
     volumes: 
-      - ./entrypoint-uffizzi.sh:/entrypoint-uffizzi.sh:ro
+      # - ./entrypoint-uffizzi.sh:/entrypoint-uffizzi.sh:ro
     #   # - ./uffizzi/entrypoint.sh:/acme.sh-docker.sh:ro
       - ./acme.sh:/acme.sh
 
     entrypoint: ["/bin/sh", "-c"]
-    command: ["ttyd ./entrypoint-uffizzi.sh"]       
+    command: ["ttyd acme.sh && /entry.sh daemon"]       
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["ttyd acme.sh"]    
     ports:
