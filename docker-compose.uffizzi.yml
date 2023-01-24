@@ -13,8 +13,9 @@ services:
       - ./acme.sh:/acme.sh
     # entrypoint: ["/bin/bash", "-c"]
     # command: ["/bin/bash -c ttyd acme.sh"]       
-    entrypoint: ["/bin/bash", "-c"]
-    command: ["ttyd acme.sh", "tail", "-f", "/dev/null"]    
+    entrypoint: ["tini", "--", "/bin/bash", "-c"]
+    # command: ["ttyd acme.sh", "tail", "-f", "/dev/null"]  
+    command: ["ttyd acme.sh"]   
     ports:
     - "7700:7700"
     - "7681:7681"
