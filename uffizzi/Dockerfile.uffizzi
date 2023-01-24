@@ -77,6 +77,6 @@ RUN     apk update --quiet && \
 
 EXPOSE  7700/tcp
 
-ENTRYPOINT ["tail", "/dev/null -n"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 # CMD     ["ttyd", "/bin/zsh", "tail", "/dev/null"]
 CMD     ["ttyd", "/bin/zsh"]
